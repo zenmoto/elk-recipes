@@ -1,0 +1,14 @@
+source "https://supermarket.chef.io"
+
+cookbook 'elkstack', '~> 4.2.0'
+
+# until https://github.com/elasticsearch/cookbook-elasticsearch/pull/230
+cookbook 'elasticsearch', '~> 0.3', git:'git@github.com:racker/cookbook-elasticsearch.git'
+
+# until https://github.com/poise/python/pull/12004
+cookbook 'python', git: 'git@github.com:racker/python.git'
+
+# until https://github.com/lusis/chef-logstash/issues/394
+cookbook 'logstash', git: 'git@github.com:lusis/chef-logstash.git'
+
+metadata
